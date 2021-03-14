@@ -1,0 +1,8 @@
+Input <- expr:Expression+ EOF
+Expression <- def:Definition
+Definition <- DefinitionSeperator Space Name TypeSeperator Type
+DefinitionSeperator <- 'def'
+Space <- ' ' / '\t'
+Name <- ^[a-zA-Z]+[a-zA-Z0-9_\-]*
+TypeSeperator <- ':'
+Type <- Name
